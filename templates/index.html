@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VALLAIPALLAM | Custom Interpreter</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1><span class="highlight">🍌 VALLAIPALLAM</span> -Interpreter</h1>
+    
+    <form method="POST">
+      <label for="code">Your Code:</label>
+      <textarea name="code" id="code" placeholder="Type your code here...">{{ code }}</textarea>
+      <button type="submit">▶ Run Code</button>
+    </form>
+
+    <div class="output-section">
+      <h2>📤 Output:</h2>
+      <pre class="output-box">{{ output }}</pre>
+
+      {% if error %}
+      <h2>⚠️ Error:</h2>
+      <pre class="error-box">{{ error }}</pre>
+      {% endif %}
+    </div>
+
+    <footer>
+      <p>Built by <strong>J.Nishanth Raj</strong> | ❤️ Robotics & Tech</p>
+    </footer>
+  </div>
+</body>
+</html>
